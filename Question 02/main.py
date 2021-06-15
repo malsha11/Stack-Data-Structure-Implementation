@@ -1,0 +1,11 @@
+from Stack import *
+MyStack = Stack(10)
+#print("\n Top element is :" , MyStack.top())
+#print(" Is Stack is Empty :",MyStack.isEmptyStack())
+#print(" Number of Stack's elements :" , MyStack.size())
+MyStack.push(10)
+MyStack.push(20)
+MyStack.push(30)
+MyStack.push(40)
+MyStack.push(50)
+MyStack.push(60)
