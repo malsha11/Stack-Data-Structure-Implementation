@@ -24,3 +24,25 @@ class Stack:
             lastElement = self.elements [self.stack-1]# Delete the Last element
             self.stack -= 1
             return lastElement
+
+
+    #Check Top Element in Stack
+    def top(self):
+        if self.stack == 0: #Check Stack  equeal to '0'
+            print("stack undrflow")
+        else:
+            return self.elements[self.stack -1]
+
+    # Check Stack is Empty
+    def isEmptyStack(self):
+        return self.size() == 0  # use function size
+
+        # Check Stack is Full
+
+    def isFullStack(self):
+        return self.stack == self.limit
+
+        # Check Stack Size
+
+    def size(self):
+        return self.stack

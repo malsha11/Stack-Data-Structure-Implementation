@@ -43,3 +43,53 @@ class Stack:
         else:
             print("Stack Overflow")
             return
+
+    # Remove element that is in the current head
+    def pop(self):
+        if self.head is None:
+            print(" stack underflow")
+            return
+        else:
+            # Removes the head node and makes the preceeding one the new head
+            poppednode = self.head
+            self.head = self.head.getNext()
+            poppednode.getNext = None
+            poppednode.data
+            return self.stack.pop()
+
+    # Return the head node data
+    def top(self):
+        if self.head is None:  # Check linked list head is none
+            print("\n Stack underflow")
+            return
+        else:
+            return self.head.data
+            return self.stack[len(self.stack) - 1]
+
+    # Check Stack is Empty
+    def isEmptyStack(self):
+        if len(self.stack) == 0:  # Check Stack length equeal to '0'
+            return True
+        else:
+            return False
+
+    # Check Stack is Full
+    def isFullStack(self):
+        if len(self.stack) == self.limit:
+            return True
+        else:
+            return False
+
+    # Check Stack Size
+    def size(self):
+        return len(self.stack)
+
+    # Print out the Stack
+    def printStack(self):
+        current = self.head
+        if self.isEmptyStack():
+            print("Stack underflow")
+        else:
+            while current is not None:
+                print(current.getData(), "->", end=" ")
+                current = current.getNext()
