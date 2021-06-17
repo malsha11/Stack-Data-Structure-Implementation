@@ -21,8 +21,9 @@ class Stack:
     def pop(self): #Delete returns a new Array also Retrieve last element before delete
         if self.stack == 0: #Check Stack equeal to '0'
             print("stack undrflow")
+
         else: # If Stack  Not Equal to '0'
-            lastElement = self.elements [self.stack-1]# Delete the Last element
+            lastElement=self.elements[self.stack -1 ]# delete the last element
             self.stack -= 1
             return lastElement
 
