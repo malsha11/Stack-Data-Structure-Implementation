@@ -37,13 +37,14 @@ class Stack:
         else:
             return self.elements[self.stack -1] # Return the top element in stack
 
+
     # Check if the stack is Empty
     def isEmptyStack(self):
         return self.size() == 0  # use function size
 
-    # Check
+    # Check if the stack is Full
     def isFullStack(self):
-        return self.stack == self.limit
+        return self.stack == self.limit #if stack size  == limit --It is a Full Stack (stack Overflow)
 
     # Check Stack Size
 
