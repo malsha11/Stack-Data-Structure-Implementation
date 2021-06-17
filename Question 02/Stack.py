@@ -37,7 +37,7 @@ class Stack:
             if self.head is None:  # Check linked list head is none
                 self.head = newNode  # Assign head to newNode
             else:
-               
+                newNode.setData(data)
                 newNode.setNext(self.head)
                 self.head = newNode
             return self.stack.append(data)  # Append data to Stack
