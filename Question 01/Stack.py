@@ -9,9 +9,10 @@ class Stack:
 
     #push data
     def push(self, data):
-        if self.stack < self.limit: #Check If stack  < limit
+        if self.stack< self.limit : #check If Stack < limit
             self.elements[self.stack] = data # Append data to Stack
-            self.stack += 1
+            self.stack += 1 # stack = Stack+1
+
 
         else: #if Stack  > limit
             print("Stack Overflow")
