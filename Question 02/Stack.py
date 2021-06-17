@@ -21,7 +21,7 @@ class Node:
     def getNext(self):
         return self.Next
 
-
+#Create the Stack Class
 class Stack:
     def __init__(self, limit=10):
         self.limit = limit
@@ -93,3 +93,4 @@ class Stack:
             while current is not None:
                 print(current.getData(), "->", end=" ")
                 current = current.getNext()
+
