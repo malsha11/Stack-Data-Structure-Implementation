@@ -27,7 +27,6 @@ class Stack:
         self.limit = limit
         self.head = Node()
         self.stack = []
-
     def push(self, data):
         # create the new node
         newNode = Node()
