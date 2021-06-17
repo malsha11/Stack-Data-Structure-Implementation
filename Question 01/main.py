@@ -1,7 +1,7 @@
 from Stack import Stack
 
 myStack = Stack(8)
-print("Stack Top element is :" , myStack.top())
+
 print("\nIs Stack Empty ? : ", myStack.isEmptyStack())
 print("Stack size :" , myStack.size())
 myStack.push(10)
