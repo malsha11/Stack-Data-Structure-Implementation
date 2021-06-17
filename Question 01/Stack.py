@@ -7,19 +7,19 @@ class Stack:
         self.elements = numpy.array([0]*limit) #Fixed size numpy Array
         self.stack = 0
 
-    #push data
+    #push data (Input an element to the top of numpy Array)
     def push(self, data):
-        if self.stack< self.limit : #check If Stack < limit
-            self.elements[self.stack] = data # Append data to Stack
-            self.stack += 1 # stack = Stack+1
+        if self.stack < self.limit : # If the Stack is not full for the giving limit
+            self.elements[self.stack] = data # Add new element to the Stack
+            self.stack += 1 # Increse the Stack size
 
 
-        else: #if Stack  > limit
+        else: # If Stack is full
             print("Stack Overflow")
             return
 
 
-    #pop data
+    #pop data (Remove the topmost element from the stack)
     def pop(self): # Delete returns a new Array also Retrieve last element before delete
         if self.stack == 0: # Check Stack equeal to '0'
             print("stack undrflow")  # Stack is Empty
