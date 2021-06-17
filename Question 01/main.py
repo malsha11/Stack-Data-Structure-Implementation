@@ -16,5 +16,5 @@ print("Stack Pop Element is :" ,myStack.pop())# Remove the last element in stack
 print("Stack Top element is :" , myStack.top())
 print("Stack size :" , myStack.size())
 print("Is Stack Full ? : " , myStack.isFullStack())
-myStack.printStack()
+
 
