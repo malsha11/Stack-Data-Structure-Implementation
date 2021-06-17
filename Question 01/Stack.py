@@ -50,6 +50,4 @@ class Stack:
     def size(self):
         return self.stack
 
-    def printStack (self):
-        for i in self.elements:
-            print(i)
+    
