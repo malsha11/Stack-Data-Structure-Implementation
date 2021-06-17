@@ -32,11 +32,11 @@ class Stack:
 
     #Check Top Element in Stack
     def top(self):
-        if self.stack > 0: #Check Stack equeal to '0'
-            self.elements[self.stack - 1]  # Return the top element in stack
-
+        if self.stack == 0: #Check Stack equeal to '0'
+            print("stack undrflow")
         else:
-            return None
+            return self.elements[self.stack -1] # Return the top element in stack
+
     # Check if the stack is Empty
     def isEmptyStack(self):
         return self.size() == 0  # use function size
