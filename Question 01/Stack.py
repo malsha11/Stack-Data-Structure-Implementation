@@ -46,7 +46,6 @@ class Stack:
         return self.stack == self.limit #if stack size  == limit --It is a Full Stack (stack Overflow)
 
     # Check Stack Size
-
     def size(self):
         return self.stack
 

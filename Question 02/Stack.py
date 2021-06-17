@@ -6,7 +6,7 @@ class Node:
         self.Next = None
 
     # set data of the node
-    def setData(self, data):
+    def setData(self , data):
         self.data = data
 
     # get data of the node
@@ -14,12 +14,13 @@ class Node:
         return self.data
 
     # set next of the data
-    def setNext(self, address):
+    def setNext(self ,address):
         self.Next = address
 
     # get data of this node
     def getNext(self):
         return self.Next
+
 
 class Stack:
     def __init__(self, limit=10):
