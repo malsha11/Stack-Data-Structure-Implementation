@@ -17,15 +17,17 @@ class Stack:
         else: #if Stack  > limit
             print("Stack Overflow")
             return
+
+
     #pop data
     def pop(self): #Delete returns a new Array also Retrieve last element before delete
         if self.stack == 0: #Check Stack equeal to '0'
-            print("stack undrflow")
+            print("stack undrflow") # Stack is Empty
 
         else: # If Stack  Not Equal to '0'
             lastElement=self.elements[self.stack -1 ]# delete the last element
-            self.stack -= 1
-            return lastElement
+            self.stack -= 1 #stack = stack -1
+            return lastElement # get last element in Stack
 
 
     #Check Top Element in Stack
