@@ -20,33 +20,32 @@ class Stack:
 
 
     #pop data
-    def pop(self): #Delete returns a new Array also Retrieve last element before delete
-        if self.stack == 0: #Check Stack equeal to '0'
-            print("stack undrflow") # Stack is Empty
+    def pop(self): # Delete returns a new Array also Retrieve last element before delete
+        if self.stack == 0: # Check Stack equeal to '0'
+            print("stack undrflow")  # Stack is Empty
 
         else: # If Stack  Not Equal to '0'
-            lastElement=self.elements[self.stack -1 ]# delete the last element
-            self.stack -= 1 #stack = stack -1
-            return lastElement # get last element in Stack
+            lastElement=self.elements[self.stack -1 ] # delete the last element
+            self.stack -= 1  # stack = stack -1
+            return lastElement  # get last element in Stack
 
 
     #Check Top Element in Stack
     def top(self):
-        if self.stack == 0: #Check Stack  equeal to '0'
-            print("stack undrflow")
-        else:
-            return self.elements[self.stack -1]
+        if self.stack > 0: #Check Stack equeal to '0'
+            self.elements[self.stack - 1]  # Return the top element in stack
 
-    # Check Stack is Empty
+        else:
+            return None
+    # Check if the stack is Empty
     def isEmptyStack(self):
         return self.size() == 0  # use function size
 
-        # Check Stack is Full
-
+    # Check
     def isFullStack(self):
         return self.stack == self.limit
 
-        # Check Stack Size
+    # Check Stack Size
 
     def size(self):
         return self.stack
