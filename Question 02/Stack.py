@@ -43,7 +43,7 @@ class Stack:
             return self.stack.append(data)  # Append data to Stack
         else:
             print("Stack Overflow")
-            return
+            
     # Remove element that is in the current head
     def pop(self):
         if self.head is None:
