@@ -13,7 +13,6 @@ class Stack:
             self.elements[self.stack] = data # Add new element to the Stack
             self.stack += 1 # Increse the Stack size
 
-
         else: # If Stack is full
             print("Stack Overflow")
             return
@@ -25,16 +24,16 @@ class Stack:
             print("stack undrflow")  # Stack is Empty
 
         else: # If Stack  Not Equal to '0'
-            lastElement=self.elements[self.stack -1 ] # delete the last element
-            self.stack -= 1  # stack = stack -1
-            return lastElement  # get last element in Stack
+            lastElement=self.elements[self.stack -1 ] # If Stack is not empty ,get the element which is pointing at the top of the Stack.
+            self.stack -= 1  # Decrease the size of the Stack by 1
+            return lastElement  # Return last element in Stack
 
 
     #Check Top Element in Stack
     def top(self):
         if self.stack == 0: #Check Stack equeal to '0'
-            print("stack undrflow")
-        else:
+            print("stack undrflow") # The Stack is Empty
+        else: # If Stack is not Empty
             return self.elements[self.stack -1] # Return the top element in stack
 
 
@@ -50,3 +49,7 @@ class Stack:
 
     def size(self):
         return self.stack
+
+    def printStack (self):
+        for i in self.elements:
+            print(i)
