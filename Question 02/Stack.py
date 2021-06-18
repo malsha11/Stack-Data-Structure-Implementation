@@ -34,7 +34,7 @@ class Stack:
         newNode.setData(data)
 
         if len(self.stack) < self.limit:  # Check If stack length < limit
-            if self.head is None:  # Check linked list head is none
+            if self.head is None:  # Check linked list head is NULL
                 self.head = newNode  # Assign head to newNode
             else:
                 newNode.setData(data)
@@ -43,7 +43,7 @@ class Stack:
             return self.stack.append(data)  # Append data to Stack
         else:
             print("Stack Overflow")
-            
+            return
     # Remove element that is in the current head
     def pop(self):
         if self.head is None:
@@ -69,7 +69,7 @@ class Stack:
     # Check Stack is Empty
     def isEmptyStack(self):
         if len(self.stack) == 0:  # Check Stack length equeal to '0'
-            return True
+            print("Stack is Overflow")
         else:
             return False
 
