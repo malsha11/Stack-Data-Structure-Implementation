@@ -89,8 +89,4 @@ class Stack:
         current = self.head
         if self.isEmptyStack():
             print("Stack underflow")
-        else:
-            while current is not None:
-                print(current.getData(), "->", end=" ")
-                current = current.getNext()
-
+        
