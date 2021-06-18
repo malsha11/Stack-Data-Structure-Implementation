@@ -1,4 +1,4 @@
-# Class Create a node of linked list
+# Class Create a node of linked list and allocate memory to it
 class Node:
     # constructor
     def __init__(self):
@@ -6,7 +6,7 @@ class Node:
         self.Next = None
 
     # set data of the node
-    def setData(self, data):
+    def setData(self , data):
         self.data = data
 
     # get data of the node
@@ -14,36 +14,36 @@ class Node:
         return self.data
 
     # set next of the data
-    def setNext(self, address):
+    def setNext(self ,address):
         self.Next = address
 
     # get data of this node
     def getNext(self):
         return self.Next
 
+#Create the Stack Class
 class Stack:
     def __init__(self, limit=10):
         self.limit = limit
         self.head = Node()
         self.stack = []
-
+    # Putting a new element
     def push(self, data):
         # create the new node
         newNode = Node()
         newNode.setData(data)
 
-        if len(self.stack) < self.limit: #Check If stack length < limit
-            if self.head is None: #Check linked list head is none
-                self.head = newNode #Assign head to newNode
+        if len(self.stack) < self.limit:  # Check If stack length < limit
+            if self.head is None:  # Check linked list head is NULL
+                self.head = newNode  # Assign head to newNode
             else:
                 newNode.setData(data)
                 newNode.setNext(self.head)
                 self.head = newNode
-            return self.stack.append(data) # Append data to Stack
+            return self.stack.append(data)  # Append data to Stack
         else:
             print("Stack Overflow")
             return
-
     # Remove element that is in the current head
     def pop(self):
         if self.head is None:
@@ -90,6 +90,7 @@ class Stack:
         if self.isEmptyStack():
             print("Stack underflow")
         else:
-            while current is not None:
+           while current is not None:
                 print(current.getData(), "->", end=" ")
                 current = current.getNext()
+

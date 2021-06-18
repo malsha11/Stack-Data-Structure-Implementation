@@ -7,42 +7,46 @@ class Stack:
         self.elements = numpy.array([0]*limit) #Fixed size numpy Array
         self.stack = 0
 
-    #push data
+    #push data (Input an element to the top of numpy Array)
     def push(self, data):
-        if self.stack < self.limit: #Check If stack  < limit
-            self.elements[self.stack] = data # Append data to Stack
-            self.stack += 1
+        if self.stack < self.limit : # If the Stack is not full for the giving limit
+            self.elements[self.stack] = data # Add new element to the Stack
+            self.stack += 1 # Increse the Stack size
 
-        else: #if Stack  > limit
+        else: # If Stack is full
             print("Stack Overflow")
             return
-    #pop data
-    def pop(self): #Delete returns a new Array also Retrieve last element before delete
-        if self.stack == 0: #Check Stack equeal to '0'
-            print("stack undrflow")
+
+
+    #pop data (Remove the topmost element from the stack)
+    def pop(self): # Delete returns a new Array also Retrieve last element before delete
+        if self.stack == 0: # Check Stack equeal to '0'
+            print("stack undrflow")  # Stack is Empty
+
         else: # If Stack  Not Equal to '0'
-            lastElement = self.elements [self.stack-1]# Delete the Last element
-            self.stack -= 1
-            return lastElement
+            lastElement=self.elements[self.stack -1 ] # If Stack is not empty ,get the element which is pointing at the top of the Stack.
+            self.stack -= 1  # Decrease the size of the Stack by 1
+            return lastElement  # Return last element in Stack
 
 
     #Check Top Element in Stack
     def top(self):
-        if self.stack == 0: #Check Stack  equeal to '0'
-            print("stack undrflow")
-        else:
-            return self.elements[self.stack -1]
+        if self.stack == 0: #Check Stack equeal to '0'
+            print("stack undrflow") # The Stack is Empty
+        else: # If Stack is not Empty
+            return self.elements[self.stack -1] # Return the top element in stack
 
-    # Check Stack is Empty
+
+    # Check if the stack is Empty
     def isEmptyStack(self):
         return self.size() == 0  # use function size
 
-        # Check Stack is Full
-
+    # Check if the stack is Full
     def isFullStack(self):
-        return self.stack == self.limit
+        return self.stack == self.limit #if stack size  == limit --It is a Full Stack (stack Overflow)
 
-        # Check Stack Size
-
+    # Check Stack Size
     def size(self):
         return self.stack
+
+
