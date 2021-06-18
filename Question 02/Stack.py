@@ -69,7 +69,7 @@ class Stack:
     # Check Stack is Empty
     def isEmptyStack(self):
         if len(self.stack) == 0:  # Check Stack length equeal to '0'
-            print("Stack is Overflow")
+            return True
         else:
             return False
 
